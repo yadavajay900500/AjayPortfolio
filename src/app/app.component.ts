@@ -21,6 +21,14 @@ export class AppComponent {
     this.menuOpen = !this.menuOpen;
   }
 
+downloadPDF() {
+  const link = document.createElement('a');
+  link.href = '/assets/resume.pdf';
+  link.download = 'resume.pdf';
+  link.click();
+}
+
+
 
 
   closeMenu() {

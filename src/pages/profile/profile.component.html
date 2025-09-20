@@ -1,56 +1,11 @@
-<!-- <section class="relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28 grid md:grid-cols-2 gap-12 items-center relative z-10">
-
-    <div class="animate-fadeInUp">
-      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
-        Hi, I'm <span class="text-indigo-600">Ajay 👋</span><br/>
-        <span class="text-gray-800">Software Developer</span>
-      </h1>
-
-      <p class="mt-5 text-gray-600 max-w-prose text-lg">
-        I build performant web apps with <b>.NET</b>, <b>Angular</b>, and <b>Node.js</b>.  
-        Passionate about clean architecture, developer experience, and shipping features that matter.
-      </p>
-
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a href="#projects" 
-           class="px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium shadow-md hover:bg-indigo-500 hover:shadow-lg transition-all duration-300">
-          🚀 View Projects
-        </a>
-        <a href="assets/resume.pdf" download 
-           class="px-6 py-3 rounded-xl border border-gray-300 font-medium bg-white hover:bg-indigo-50 hover:border-indigo-400 transition-all duration-300 shadow-sm">
-          📄 Download Resume
-        </a>
-      </div>
-    </div>
-
-    <div class="flex justify-center md:justify-end animate-fadeInUp delay-200">
-      <div class="relative">
-        <img src="assets/profile.jpg" alt="Ajay Yadav" 
-             class="w-48 h-48 sm:w-60 sm:h-60 rounded-2xl object-cover shadow-2xl transform hover:scale-105 transition-transform duration-500">
-        
-        <div class="absolute -inset-3 rounded-2xl bg-gradient-to-r from-indigo-400 to-pink-400 blur-2xl opacity-30 animate-pulse"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="absolute top-10 left-10 w-72 h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob"></div>
-  <div class="absolute bottom-10 right-10 w-72 h-72 bg-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
-</section> -->
-
 
 
 <section class="relative h-screen flex items-center justify-center text-white overflow-hidden">
 
   <!-- Background Carousel -->
-  <div class="absolute inset-0">
+  <!-- <div class="absolute inset-0">
     <div *ngFor="let bg of backgrounds; let i = index">
-      <!-- <img 
-        [src]="bg" 
-        alt="Background {{ i }}" 
-        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
-        [class.opacity-100]="i === currentIndex"
-        [class.opacity-0]="i !== currentIndex"> -->
+   
       <img 
         src="bg2.jpg" 
         alt="Background {{ i }}" 
@@ -58,8 +13,45 @@
         [class.opacity-100]="i === currentIndex"
         [class.opacity-0]="i !== currentIndex">
     </div>
-    <div class="absolute inset-0 bg-black/50"></div> <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/50"></div> 
+  </div> -->
+
+
+<!-- 
+  <div class="absolute inset-0">
+  <div *ngFor="let bg of backgrounds; let i = index">
+    <img 
+      [src]="bg"
+      alt="Background {{ i }}" 
+      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+      [class.opacity-100]="i === currentIndex"
+      [class.opacity-0]="i !== currentIndex">
   </div>
+
+  <div class="absolute inset-0 bg-black/50"></div>
+</div> -->
+
+
+<div class="absolute inset-0 overflow-hidden">
+  <div *ngFor="let bg of backgrounds; let i = index">
+    <img 
+      [src]="bg"
+      alt="Background {{ i }}" 
+      class="absolute inset-0 w-full h-full object-cover
+             transition-all duration-1500 ease-in-out
+             transform"
+      [class.opacity-100]="i === currentIndex"
+      [class.opacity-0]="i !== currentIndex"
+      [class.translate-x-0]="i === currentIndex"
+      [class.translate-x-full]="i > currentIndex"
+      [class.-translate-x-full]="i < currentIndex">
+  </div>
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/50"></div>
+</div>
+
+
 
   <!-- Content -->
   <div class="relative z-10 text-center px-4 animate-fadeInUp">
