@@ -23,11 +23,10 @@ export class AppComponent {
 
 downloadPDF() {
   const link = document.createElement('a');
-  link.href = '/assets/resume.pdf';
+  link.href = '/assets/Ajay_Yadav_Resume_DotNet_And_Angular_Developer.pdf';
   link.download = 'resume.pdf';
   link.click();
 }
-
 
 
 
