@@ -9,11 +9,20 @@
 
 <!-- Desktop Nav -->
 <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-<a href="#about" class="hover:text-indigo-600">About</a>
+<!-- <a href="#about" class="hover:text-indigo-600">About</a>
 <a href="#skills" class="hover:text-indigo-600">Skills</a>
 <a href="#projects" class="hover:text-indigo-600">Projects</a>
 <a href="#experience" class="hover:text-indigo-600">Experience</a>
-<a href="#contact" class="hover:text-indigo-600">Contact</a>
+<a href="#contact" class="hover:text-indigo-600">Contact</a> -->
+
+
+  <a href="#about" [ngClass]="{'text-indigo-600 font-bold': activeSection === 'about'}" class="hover:text-indigo-600">About</a>
+  <a href="#skills" [ngClass]="{'text-indigo-600 font-bold': activeSection === 'skills'}" class="hover:text-indigo-600">Skills</a>
+  <a href="#projects" [ngClass]="{'text-indigo-600 font-bold': activeSection === 'projects'}" class="hover:text-indigo-600">Projects</a>
+  <a href="#experience" [ngClass]="{'text-indigo-600 font-bold': activeSection === 'experience'}" class="hover:text-indigo-600">Experience</a>
+  <a href="#education" [ngClass]="{'text-indigo-600 font-bold': activeSection === 'education'}" class="hover:text-indigo-600">Education</a>
+  <a href="#contact" [ngClass]="{'text-indigo-600 font-bold': activeSection === 'contact'}" class="hover:text-indigo-600">Contact</a>
+
 <button (click)="downloadPDF()" 
         class="px-3 py-1.5 rounded-xl border hover:bg-indigo-50">
   Download Resume
@@ -51,7 +60,7 @@
 
 <main id="home" class="pt-[72px]">
 
-  <app-profile></app-profile>
+  <!-- <app-profile></app-profile>
 
 <app-about></app-about>
 
@@ -61,7 +70,50 @@
 <app-projects></app-projects>
 
 
-<app-experience></app-experience>
+<app-experience></app-experience> -->
+
+
+  <app-profile #homeSection id="home"></app-profile>
+  <app-about #aboutSection id="about"></app-about>
+  <app-skills #skillsSection id="skills"></app-skills>
+  <app-projects #projectsSection id="projects"></app-projects>
+  <app-experience #experienceSection id="experience"></app-experience>
+
+  <section id="education" class="bg-gradient-to-br from-indigo-50 to-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800">Education</h2>
+      <p class="mt-2 text-gray-600">Here is my academic background and qualifications.</p>
+    </div>
+
+    <!-- Education List -->
+    <div class="space-y-8">
+      <div class="bg-white rounded-2xl shadow-lg p-6 opacity-0 translate-x--10 animate-fadeInLeft">
+        <h3 class="text-xl font-semibold text-indigo-600">Bachelor of Technology (B.Tech)</h3>
+        <p class="text-gray-700">Computer Science & Engineering</p>
+        <p class="text-gray-500">XYZ University, 2018 — 2022</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 opacity-0 translate-x--10 animate-fadeInLeft">
+        <h3 class="text-xl font-semibold text-indigo-600">Senior Secondary (12th)</h3>
+        <p class="text-gray-700">Science Stream</p>
+        <p class="text-gray-500">ABC School, 2016 — 2018</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 opacity-0 translate-x--10 animate-fadeInLeft">
+        <h3 class="text-xl font-semibold text-indigo-600">Secondary (10th)</h3>
+        <p class="text-gray-700">General</p>
+        <p class="text-gray-500">ABC School, 2014 — 2016</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-work-projects></app-work-projects>
+
+<app-blog></app-blog>
+
 
 <section id="contact" class="bg-gradient-to-br from-indigo-50 to-white">
   <section id="contact" class="bg-gradient-to-br from-indigo-50 to-white opacity-0 translate-x-10 transition-all duration-700"></section>
@@ -76,27 +128,37 @@
     <div class="grid md:grid-cols-2 gap-12 items-center">
       
       <!-- Contact Info -->
-      <div class="space-y-6 animate-fadeInLeft">
-        <p class="text-gray-700">
-          <span class="font-semibold">Email:</span>
-          <a href="https://mail.google.com/mail/?view=cm&to=yadavajay900500@gmail.com" target="_blank" class="text-indigo-600 hover:underline">
-yadavajay900500&#64;gmail.com
-</a>
+   <div class="space-y-6">
+  <!-- Email -->
+  <p class="text-gray-700 opacity-0 translate-x--10 animate-fadeInLeft">
+    <span class="font-semibold">Email:</span>
+    <a href="mailto:yadavajay900500@gmail.com" class="text-indigo-600 hover:underline" target="_blank">
+     yadavajay900500&#64;gmail.com
+    </a>
+  </p>
 
-          <!-- <a href="mailto:yadavajay900500@gmail.com" class="text-indigo-600 hover:underline">yadavajay900500&#64;gmail.com</a> -->
-        </p>
-        <p class="text-gray-700">
-          <span class="font-semibold">LinkedIn:</span>
-          <a href="https://linkedin.com/in/yadavajay900500" target="_blank" class="text-indigo-600 hover:underline">linkedin.com/in/yadavajay900500</a>
-        </p>
-        <p class="text-gray-700">
-          <span class="font-semibold">GitHub:</span>
-          <a href="https://github.com/yadavajay900500" target="_blank" class="text-indigo-600 hover:underline">github.com/yadavajay900500</a>
-        </p>
-        <p class="text-gray-700">
-          <span class="font-semibold">Location:</span> India
-        </p>
-      </div>
+  <!-- LinkedIn -->
+  <p class="text-gray-700 opacity-0 translate-x--10 animate-fadeInLeft">
+    <span class="font-semibold">LinkedIn:</span>
+    <a href="https://linkedin.com/in/yadavajay900500" target="_blank" class="text-indigo-600 hover:underline">
+      linkedin.com/in/yadavajay900500
+    </a>
+  </p>
+
+  <!-- GitHub -->
+  <p class="text-gray-700 opacity-0 translate-x--10 animate-fadeInLeft">
+    <span class="font-semibold">GitHub:</span>
+    <a href="https://github.com/yadavajay900500" target="_blank" class="text-indigo-600 hover:underline">
+      github.com/yadavajay900500
+    </a>
+  </p>
+
+  <!-- Location -->
+  <p class="text-gray-700 opacity-0 translate-x--10 animate-fadeInLeft">
+    <span class="font-semibold">Location:</span> India
+  </p>
+</div>
+
 
       <!-- Contact Form -->
       <!-- <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="space-y-6 bg-white p-6 rounded-2xl shadow-xl animate-fadeInRight"> -->

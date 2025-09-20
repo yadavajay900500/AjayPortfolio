@@ -12,7 +12,7 @@ projects = [
     {
       title: 'FCM Device Token Utility (React Native)',
       description: 'Generates FCM tokens for QA; integrates with .NET Core API for test notifications.',
-      image: 'assets/projects/fcm-tool.png',
+      image: 'erp.jpg',
       live: '#',
       source: '#',
       delay: 0.1
@@ -20,7 +20,7 @@ projects = [
     {
       title: 'Portfolio Website (Angular)',
       description: 'Fully responsive developer portfolio with animations and Tailwind CSS.',
-      image: 'assets/projects/portfolio.png',
+      image: 'project.jpg',
       live: '#',
       source: '#',
       delay: 0.3
@@ -28,7 +28,7 @@ projects = [
     {
       title: 'CI/CD Pipeline Setup',
       description: 'Automated builds & deployments with GitHub Actions and Docker.',
-      image: 'assets/projects/cicd.png',
+      image: 'project1.jpg',
       live: '#',
       source: '#',
       delay: 0.5

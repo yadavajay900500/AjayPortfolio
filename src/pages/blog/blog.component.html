@@ -1,0 +1,44 @@
+<section id="blog" class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Heading -->
+    <div class="text-center mb-12">
+      <p class="text-sm text-gray-400 uppercase tracking-wider">Recent Blog</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Latest Articles</h2>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (post of blogPosts.slice(0, visibleCount); track post.title) {
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden group cursor-pointer transition hover:shadow-lg">
+
+          <!-- Blog Image -->
+          <img [src]="post.image" [alt]="post.title"
+               class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
+
+          <!-- Blog Content -->
+          <div class="p-6">
+            <p class="text-xs text-gray-500 mb-2">
+              {{ post.date }} | {{ post.category }} | 💬 {{ post.comments }}
+            </p>
+            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition">
+              {{ post.title }}
+            </h3>
+            <p class="text-sm text-gray-600 mt-2">
+              {{ post.description }}
+            </p>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-10">
+      @if (visibleCount < blogPosts.length) {
+        <button (click)="loadMore()" 
+                class="px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
+          Load More ⟳
+        </button>
+      }
+    </div>
+  </div>
+</section>

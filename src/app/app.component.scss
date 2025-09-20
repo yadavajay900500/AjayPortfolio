@@ -1,3 +1,4 @@
+/* ================= Gradient Animation ================= */
 @keyframes gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -9,21 +10,61 @@
   animation: gradient 8s ease infinite;
 }
 
+/* ================= Fade-In Animations ================= */
 
+/* Fade in from left */
 @keyframes fadeInLeft {
   from { opacity: 0; transform: translateX(-100px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
+.animate-fadeInLeft {
+  animation: fadeInLeft 1s ease-out forwards;
+}
+
+/* Fade in from right */
 @keyframes fadeInRight {
   from { opacity: 0; transform: translateX(100px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
-.animate-fadeInLeft {
-  animation: fadeInLeft 1s ease-out;
+.animate-fadeInRight {
+  animation: fadeInRight 1s ease-out forwards;
 }
 
-.animate-fadeInRight {
-  animation: fadeInRight 1s ease-out;
+/* ================= Initial Hidden States ================= */
+
+/* Hidden initially for left/right animations */
+.opacity-0 {
+  opacity: 0;
+}
+
+.translate-x-10 {
+  transform: translateX(100px); /* Can use -100px for left animations */
+}
+
+.translate-x--10 {
+  transform: translateX(-100px); /* Optional for negative offset */
+}
+
+/* ================= Utility Animations ================= */
+
+/* Smooth fade-in for general elements */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Pulse effect (used in footer divider) */
+@keyframes pulse {
+  0%, 100% { transform: scaleX(1); opacity: 1; }
+  50% { transform: scaleX(1.2); opacity: 0.7; }
+}
+
+.animate-pulse {
+  animation: pulse 1.5s infinite;
 }
