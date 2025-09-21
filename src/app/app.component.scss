@@ -68,3 +68,23 @@
 .animate-pulse {
   animation: pulse 1.5s infinite;
 }
+
+
+
+
+@keyframes apeare {
+  from {
+opacity: 0;
+transform: translateX(-100px);
+  }
+  to{
+opacity: 1;
+transform: translateX(0px);
+  }
+}
+
+.block{
+  animation:  apeare linear;
+  animation-timeline: var();
+  animation-range: entry 0% cover 40%;
+}

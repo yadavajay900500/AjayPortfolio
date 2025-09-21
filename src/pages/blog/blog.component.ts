@@ -23,7 +23,7 @@ blogPosts: BlogPost[] = [
       comments: 4,
       title: 'Renovating National Gallery',
       description: 'Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
-      image: 'assets/images/blog1.jpg'
+      image: 'p1.jpg'
     },
     {
       date: 'April 14, 2018',
@@ -31,7 +31,7 @@ blogPosts: BlogPost[] = [
       comments: 4,
       title: 'WordPress for a Beginner',
       description: 'Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
-      image: 'assets/images/blog2.jpg'
+      image: 'p2.jpg'
     },
     {
       date: 'April 14, 2018',
@@ -39,7 +39,7 @@ blogPosts: BlogPost[] = [
       comments: 4,
       title: 'Make Website From Scratch',
       description: 'Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
-      image: 'assets/images/blog3.jpg'
+      image:  'p3.jpg'
     }
   ];
 

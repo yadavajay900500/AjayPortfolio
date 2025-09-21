@@ -1,3 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+
+
+/* ================= Gradient Animation ================= */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+/* ================= Scroll Fade Animations ================= */
+.hidden-on-load {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.show-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: left/right variations */
+.fade-left.hidden-on-load {
+  transform: translateX(-40px);
+}
+.fade-right.hidden-on-load {
+  transform: translateX(40px);
+}

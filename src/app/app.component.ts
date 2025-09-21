@@ -9,10 +9,12 @@ import { ProfileComponent } from "../pages/profile/profile.component";
 import {  AfterViewInit, ViewChild, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { WorkProjectsComponent } from "../pages/work-projects/work-projects.component";
 import { BlogComponent } from "../pages/blog/blog.component";
+import { EductionComponent } from "../pages/eduction/eduction.component";
+import { ScrollAnimateDirective } from './scroll-animate.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, ExperienceComponent, ProjectsComponent, SkillsComponent, AboutComponent, ProfileComponent, WorkProjectsComponent, BlogComponent],
+  imports: [ScrollAnimateDirective, CommonModule, ExperienceComponent, ProjectsComponent, SkillsComponent, AboutComponent, ProfileComponent, WorkProjectsComponent, BlogComponent, EductionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

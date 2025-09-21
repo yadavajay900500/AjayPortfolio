@@ -17,12 +17,12 @@ export class WorkProjectsComponent {
   selectedCategory: string = 'All';
 
   projects: Project[] = [
-    { title: 'Creative Food Layout', category: 'Graphic Design', image: 'assets/projects/food.jpg' },
-    { title: 'Red Sneakers', category: 'Web Design', image: 'assets/projects/sneakers.jpg' },
-    { title: 'ERP Software Dashboard', category: 'Software', image: 'assets/projects/erp.jpg' },
-    { title: 'Mobile Health App', category: 'Apps', image: 'assets/projects/healthapp.jpg' },
-    { title: 'Portfolio Website', category: 'Web Design', image: 'assets/projects/portfolio.jpg' },
-    { title: 'Marketing Dashboard', category: 'Software', image: 'assets/projects/dashboard.jpg' }
+    { title: 'Creative Food Layout', category: 'Graphic Design', image: 'p4.jpg' },
+    { title: 'Red Sneakers', category: 'Web Design', image: 'p5.jpg' },
+    { title: 'ERP Software Dashboard', category: 'Software', image: 'p6.jpg' },
+    { title: 'Mobile Health App', category: 'Apps', image: 'p1.jpg' },
+    { title: 'Portfolio Website', category: 'Web Design', image: 'p2.jpg' },
+    { title: 'Marketing Dashboard', category: 'Software', image: 'p7.jpg' }
   ];
 
   get filteredProjects() {
